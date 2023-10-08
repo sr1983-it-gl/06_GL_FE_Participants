@@ -8,11 +8,17 @@ function testConstructURL(){
 
 }
 
-function testInvokeURL(){
+async function testInvokeURL(){
 
+  const weatherAPIObj = new WeatherAPI();
+
+  weatherAPIObj.constructURL("Mumbai");
+
+  const responseJSON = await weatherAPIObj.invokeURL();
   // weather-object create
   // responseJSON invokeURL()
-  // print (responseJSON)
+  
+  console.log(responseJSON);
 }
 
 // testConstructURL();
