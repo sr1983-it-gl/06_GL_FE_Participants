@@ -4,7 +4,6 @@ import { WeatherUtils } from "./weather-utils.js";
 
 async function testResponseConversion(){
 
-
   const weatherAPIObj = new WeatherAPI();
   weatherAPIObj.constructURL("France");
   const responseJSON = await weatherAPIObj.invokeURL();
